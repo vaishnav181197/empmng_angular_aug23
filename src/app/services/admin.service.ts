@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AdminService {
 
-  base_url="http://localhost:3000"
+  base_url="https://empmng-jsonserver-aug23.onrender.com"
 
   constructor(private http:HttpClient) { }
 
