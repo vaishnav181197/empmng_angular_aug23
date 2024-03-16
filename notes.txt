@@ -1,0 +1,61 @@
+=>Angular Modules:
+
+-collection of components/modularisation of app or components
+-ng g m module_name
+-ng g m employee --route employee --module app.module [to create routing enabled module employee,
+ and generate path to employee in root module app]
+
+=>Dependency Injection:
+-when methods and properties of one class(A) is needed on other class(B), then that methods and props becomes class's(B's) dependencies
+ class A share it to class B by procedure called dependency injection,where class A is imported in B and it provides an injectot(a variable)
+ to class B through B's Constructor method to access dependencies
+ Syntax(in class B):
+
+    constructor(access_specifier injector_var:classA){
+
+    }
+
+=>Directives:
+--------------
+Built-in Directives
+-components
+-attribute directives
+    ngClass
+    ngStyle
+    ngModel:two way binding.to access form controls/input fields
+    ngForm:to access form elements
+-structural directives
+    ngFor
+    ngIf
+    ngSwitch
+
+
+ =>Angular Forms:
+
+ -Templete driven forms
+ -Model driven forms
+
+ =>Toastr:
+ -external package for style based alert messages
+    npm i ngx-toastr
+    -import ngx-toastr in styles.css
+    -add css file of toastr in angular.json's styles prop
+    -import and register ToastrModule and BrowserAnimationModule in app.module.ts 
+    -import ToastrService to the desired component and use it - success,error,info,warning
+
+
+=>Data Sharing Between Parent and Child components:
+---------------------------------------------
+-Parent to Child : data will be passes as property to child from parent by the use of @input decorator
+-Child to Parent : data will be passed as event value to parent from child by the use of @output decorator
+
+parent.html=>
+
+        <child></child>
+
+-EventEmitter - class which helps to define custom events
+
+=>Angular Guards:
+used to protect routes from unauthorized access
+
+-ng g g folder-name/guard-name
